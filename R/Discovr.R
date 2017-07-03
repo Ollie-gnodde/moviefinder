@@ -1,5 +1,15 @@
 
-
+#' Discover Movies Based on your Preferences
+#'
+#' @param genre
+#' @param rating
+#' @param director
+#' @param actor
+#' @return movie_title
+#' @export
+#' @examples
+#' movie_disc("Action", 7, "Ridley Scott", "Mark Addy" )
+#' movie_disc("Action", 5, ,"Tom Cruise")
 
 movie_disc <- function(genre = NA, rating = 0, director = NA, actor = NA) {
 
@@ -22,6 +32,6 @@ movie_disc <- function(genre = NA, rating = 0, director = NA, actor = NA) {
   movie_metadata$movie_title[ class1 ]
 }
 
-movie_disc("Comedy", 7, ,"Adam Sandler")
+
 
 
