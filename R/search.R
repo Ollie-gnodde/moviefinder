@@ -1,5 +1,17 @@
 
-library(dplyr)
+
+# library(dplyr)
+
+#' Function that gives movie information
+
+#' Necessary package(s): dplyr
+
+#' @param movie_title_search the movie that you want information on
+#' @return Movie title, Director name, Duration, Genre, Main actors name, Content rating, imdb score
+#' @examples
+#' MovieFinder("Avatar")
+#' MovieFinder("The Lord of the Rings")
+#' @export
 
 
 
@@ -11,5 +23,4 @@ MovieFinder <- function(movie_title_search){
   select(searchMovie, movie_title, director_name, duration, genres, actor_1_name, content_rating, imdb_score)
 
 }
-
 
