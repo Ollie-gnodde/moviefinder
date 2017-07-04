@@ -1,11 +1,10 @@
 
-
 # library(dplyr)
 
 #' Function that gives movie information
-
+#'
 #' Necessary package(s): dplyr
-
+#'
 #' @param movie_title_search the movie that you want information on
 #' @return Movie title, Director name, Duration, Genre, Main actors name, Content rating, imdb score
 #' @examples

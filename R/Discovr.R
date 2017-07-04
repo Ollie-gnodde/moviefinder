@@ -26,12 +26,13 @@ movie_disc <- function(genre = NA, rating = 0, director = NA, actor = NA) {
  } else if (is.na(director)) {class1 <- (movie_metadata$imdb_score >= rating) & grepl(genre, movie_metadata$genres) & grepl(actor, movie_metadata$actor_1_name)
 
  } else {class1 <- (movie_metadata$imdb_score >= rating) & grepl(genre, movie_metadata$genres) & grepl(director, movie_metadata$director_name) & grepl(actor, movie_metadata$actor_1_name)
-}
+ }
+
 
 
   movie_metadata$movie_title[ class1 ]
 }
 
 
-
+movie_disc("Comedy", 5, "Pete Docter", "Buscemi" )
 
