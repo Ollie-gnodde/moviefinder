@@ -28,5 +28,23 @@ test_that("Checking if all the variables are in place", {
 
 
  })
-?test_that
-?cat
+
+
+ test_that("Checking if actor and director is left out", {
+   expect_equal(substr(movie_disc("Western", 8.4, , ),
+                       1,
+                       nchar(movie_disc("Western", 8.4, , ))-1),
+                c("Django Unchained", "Once Upon a Time in the West", "The Good, the Bad and the Ugly") )
+
+
+   expect_equal(substr(movie_disc("Thriller", 8.8, ,  ),
+                       1,
+                       nchar(movie_disc("Thriller", 8.8, ,  ))-1),
+                c("The Dark Knight", "Inception", "Daredevil", "Fargo"))
+
+
+ })
+
+
+
+
