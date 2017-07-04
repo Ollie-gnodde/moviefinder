@@ -10,7 +10,7 @@ MovieFinder(movie_title_search)
 \item{movie_title_search}{the movie that you want information on}
 }
 \value{
-Movie title, Director name, Duration, Genre, Main actors name, Content rating, imdb score
+Movie title, Director name, Genre, Main actors name, Content rating
 }
 \description{
 Necessary package(s): dplyr
