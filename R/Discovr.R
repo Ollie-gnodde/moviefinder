@@ -32,7 +32,3 @@ movie_disc <- function(genre = NA, rating = 0, director = NA, actor = NA) {
 
   movie_metadata$movie_title[ class1 ]
 }
-
-
-movie_disc("Thriller", 8.8, , )
-?stop

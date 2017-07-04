@@ -1,6 +1,4 @@
 
-# library(dplyr)
-
 #' Function that gives movie information
 #'
 #' Necessary package(s): dplyr
