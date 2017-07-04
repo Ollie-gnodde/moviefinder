@@ -13,7 +13,7 @@
 
 movie_disc <- function(genre = NA, rating = 0, director = NA, actor = NA) {
 
-  if ( is.na(genre)) stop ("Please enter a genre for your movie.")
+  if ( is.na(genre)) stop ("Please enter a genre for your movie.", call. = FALSE)
 
  if (is.na(actor) & is.na(director)) {
    class1 <- (movie_metadata$imdb_score >= rating) & grepl(genre, movie_metadata$genres)
@@ -34,5 +34,5 @@ movie_disc <- function(genre = NA, rating = 0, director = NA, actor = NA) {
 }
 
 
-movie_disc("Comedy", 5, "Pete Docter", "Buscemi" )
-
+movie_disc("Thriller", 8.8, , )
+?stop

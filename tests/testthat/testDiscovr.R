@@ -45,6 +45,25 @@ test_that("Checking if all the variables are in place", {
 
  })
 
+test_that("When the genre is left out", {
+  expect_error(movie_disc(, 8.8, "Donner", "Brando"), "Please enter a genre for your movie.", fixed = TRUE)
+
+
+})
+
+
+
+test_that("Checking if director is left out", {
+  expect_equal(substr(movie_disc("Romance", 7, NA, "Marlon Brando"),
+                      1,
+                      nchar(movie_disc("Romance", 7, NA, "Marlon Brando"))-1),
+               c("Superman", "On the Waterfront"))
+})
+
+
+
+
+
 
 
 
