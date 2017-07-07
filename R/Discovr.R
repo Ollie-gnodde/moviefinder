@@ -1,10 +1,10 @@
 
 #' Discover Movies Based on your Preferences
 #'
-#' @param genre
-#' @param rating
-#' @param director
-#' @param actor
+#' @param genre the genre of the movie that you are interested
+#' @param rating the rating of the movie that you are interested
+#' @param director the director of the movie that you are interested
+#' @param actor the actor of the movie that you are interested
 #' @return movie_title
 #' @export
 #' @examples
