@@ -7,14 +7,63 @@ test_that("Checking if all the variables are in place", {
     nchar(movie_disc("Romance", 7, "Richard Donner", "Marlon Brando"))-1),
     "Superman")
 
-  #expect_equal(movie_disc(""Comedy", 5, "Pete Docter", "Buscemi"), 'Monsters, Inc.')
+  expect_equal(substr(movie_disc("Comedy", 5, "Pete Docter", "Buscemi"),
+                      1,
+                      nchar(movie_disc("Comedy", 5, "Pete Docter", "Buscemi"))-1),
+               "Monsters, Inc.")
+
 })
 
-#test_that("Checking if actor is left out", {
- # expect_equal(movie_disc("Romance", 7, "Richard Donner", ), Superman )
-  #expect_equal(movie_disc("Comedy", 5, "Adam Rifkin", ), Detroit Rock City, Shooting\ the\ Warwicks)
+ test_that("Checking if actor is left out", {
+  expect_equal(substr(movie_disc("Romance", 7, "Richard Donner", "Marlon Brando"),
+  1,
+  nchar(movie_disc("Romance", 7, "Richard Donner", ))-1),
+  "Superman" )
+
+
+ expect_equal(substr(movie_disc("Comedy", 5, "Adam Rifkin",  ),
+                     1,
+                     nchar(movie_disc("Comedy", 5, "Adam Rifkin", ))-1),
+              c("Detroit Rock City", "Shooting the Warwicks"))
+
+
+ })
+
+
+ test_that("Checking if actor and director is left out", {
+   expect_equal(substr(movie_disc("Western", 8.4, , ),
+                       1,
+                       nchar(movie_disc("Western", 8.4, , ))-1),
+                c("Django Unchained", "Once Upon a Time in the West", "The Good, the Bad and the Ugly") )
+
+
+   expect_equal(substr(movie_disc("Thriller", 8.8, ,  ),
+                       1,
+                       nchar(movie_disc("Thriller", 8.8, ,  ))-1),
+                c("The Dark Knight", "Inception", "Daredevil", "Fargo"))
+
+
+ })
+
+test_that("When the genre is left out", {
+  expect_error(movie_disc(, 8.8, "Donner", "Brando"), "Please enter a genre for your movie.", fixed = TRUE)
+
+
+})
 
 
 
-#})
-?test_that
+test_that("Checking if director is left out", {
+  expect_equal(substr(movie_disc("Romance", 7, NA, "Marlon Brando"),
+                      1,
+                      nchar(movie_disc("Romance", 7, NA, "Marlon Brando"))-1),
+               c("Superman", "On the Waterfront"))
+})
+
+
+
+
+
+
+
+
