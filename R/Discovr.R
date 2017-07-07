@@ -34,5 +34,3 @@ movie_disc <- function(genre = NA, rating = 0, director = NA, actor = NA) {
 }
 
 
-movie_disc("Comedy", 5, "Pete Docter", "Buscemi" )
-
